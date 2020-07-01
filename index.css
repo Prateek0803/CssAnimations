@@ -1,0 +1,50 @@
+html,body{
+    height: 100%;
+    width: 100%;
+    margin:0;
+    overflow: hidden;
+}
+
+.sky, .grass, .road{
+    position: relative;
+}
+
+.sky{
+    background: lightblue;
+    height:40%;
+}
+.grass{
+    height:30%;
+    background: darkgreen;
+}
+
+.road{
+    height: 30%;
+    background: dimgrey;
+    box-sizing: border-box;
+    border-top:10px solid grey;
+    border-bottom: 10px solid grey;
+    width: 100%; 
+}
+
+.lines{
+    box-sizing: border-box;
+    border: white dashed 8px;
+    top:50%;
+    position: absolute;
+    width: 100%;
+}
+
+.luigi{
+    position: absolute;
+    top:-50px;
+    animation-name: drive;
+    animation-duration: 6s;
+    animation-iteration-count: infinite;
+    transition: ease;
+}
+
+@keyframes drive{
+    from{transform: translateX(-100px);}
+    to{transform: translateX(1700px);}
+}
